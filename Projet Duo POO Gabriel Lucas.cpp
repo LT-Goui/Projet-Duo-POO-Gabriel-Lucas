@@ -6,6 +6,8 @@
 int main()
 {
     std::cout << "Hello World!\n";
+
+    //Ceci est un test de remote
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
