@@ -1,5 +1,5 @@
 #pragma once
-class Tiles
+class Tile
 {
 public :
 
@@ -10,15 +10,11 @@ public :
 		GROUND = 0,
 		WATER,
 		MOUNTAIN,
+		EXIT,
 		COUNT
 
 	};
 
-	TYPES tileType = GROUND;
-
-	//Tiles allTiles[3] = {};
-
-
-	Tiles(char name, bool canGoThrough);
+	Tile(char name, bool canGoThrough);
 };
 
