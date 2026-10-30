@@ -7,7 +7,6 @@ int main()
 {
     std::cout << "Hello World!\n";
     
-    //test
 
     //Ceci est un test de remote
     //Ceci est un autre testde remote

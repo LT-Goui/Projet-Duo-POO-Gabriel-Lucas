@@ -43,7 +43,7 @@ gitGraph
 
 ## Coding style
 
-Le travail de groupe permet d'introduire les conventions de code : [Convention par défaut](Project/CodingStyleCPP.md). Le nombre de **caractères par ligne (90)** et le nombre de **lignes par fonction (25)** n'est pas modifiable. Pour le reste, il faut juste que l'intégralité du code du groupe respecte la convention qui sera disponible dans le répertoire du projet.
+Le travail de groupe permet d'introduire les conventions de code : [Convention par défaut](CodingStyleCPP.md). Le nombre de **caractères par ligne (90)** et le nombre de **lignes par fonction (25)** n'est pas modifiable. Pour le reste, il faut juste que l'intégralité du code du groupe respecte la convention qui sera disponible dans le répertoire du projet.
 
 ## Tests unitaires
 
