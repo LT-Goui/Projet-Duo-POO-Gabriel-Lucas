@@ -1,24 +1,21 @@
-// Projet Duo POO Gabriel Lucas.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
-//
-
 #include <iostream>
+#include "Map.h"
+#include "Utilities.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
     
+    Map map;
 
-    //Ceci est un test de remote
-    //Ceci est un autre testde remote
+    map.size = { 5,5 };
+
+    for (int y = 0; y <map.getHeight() ; ++y) {
+        for (int x = 0; x < map.getWidth(); ++x) {
+            map.data.push_back(0);
+        }
+    }
+
+    int i;
+    std::cin >> i;
 }
-
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
-// Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
-
-// Astuces pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
