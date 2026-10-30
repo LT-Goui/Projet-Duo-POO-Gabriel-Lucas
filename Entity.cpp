@@ -1,4 +1,5 @@
 #include "Entity.h"
+#include "Map.h"
 
 void Entity::damage(int amount)
 {
@@ -9,5 +10,12 @@ void Entity::damage(int amount)
 
 		this->kill();
 	}
+
+}
+
+bool Entity::canMove(Map current_map, Vector2 direction)
+{
+	Vector2 target_position = this->position + direction;
+	return current_map.getTileAtPos(target_position).canGoThrough;
 
 }
