@@ -19,3 +19,11 @@ bool Entity::canMove(Map current_map, Vector2 direction)
 	return current_map.getTileAtPos(target_position).canGoThrough;
 
 }
+
+void Entity::moveInDirection(Map current_map, Vector2 direction)
+{
+	if (this->canMove(current_map, direction)) {
+		this->position = this->position + direction;
+	}
+
+}
