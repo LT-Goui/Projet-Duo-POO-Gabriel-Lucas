@@ -135,6 +135,8 @@
     <ClCompile Include="Swimmer.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="Warrior.cpp" />
+    <ClCompile Include="WarriorMage.cpp" />
     <ClCompile Include="Zombie.cpp" />
     <ClCompile Include="ZombieSwimmer.cpp" />
   </ItemGroup>
@@ -150,6 +152,8 @@
     <ClInclude Include="Swimmer.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Warrior.h" />
+    <ClInclude Include="WarriorMage.h" />
     <ClInclude Include="Zombie.h" />
     <ClInclude Include="ZombieSwimmer.h" />
   </ItemGroup>
