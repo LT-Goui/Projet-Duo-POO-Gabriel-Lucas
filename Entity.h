@@ -17,7 +17,7 @@ class Entity
 
 		virtual bool canMove(Map current_map,Vector2 direction);
 
-		virtual void moveInDirection(Vector2 direction);
+		virtual void moveInDirection(Map current_map, Vector2 direction);
 
 };
 
