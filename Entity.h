@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Utilities.h"
+#include "Map.h"
 
 class Entity
 {
@@ -14,6 +15,9 @@ class Entity
 
 		virtual void kill() = 0;
 
+		virtual bool canMove(Map current_map,Vector2 direction);
+
+		virtual void moveInDirection(Vector2 direction);
 
 };
 
