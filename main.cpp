@@ -7,6 +7,7 @@ int main()
 {
     std::cout << "Hello World!\n";
 
+	//test affichage map
     Map map;
     map.size = { 5,5 };
 
