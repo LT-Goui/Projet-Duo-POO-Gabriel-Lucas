@@ -13,11 +13,15 @@ void Entity::damage(int amount)
 
 }
 
-bool Entity::canMove(Map current_map, Vector2 direction)
+bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)
 {
 	Vector2 target_position = this->position + direction;
 	return current_map.getTileAtPos(target_position).canGoThrough;
 
+}
+
+void Entity::moveInDirection(Vector2 direction)
+{
 }
 
 void Entity::moveInDirection(Map current_map, Vector2 direction)

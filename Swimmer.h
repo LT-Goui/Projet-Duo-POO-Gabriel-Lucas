@@ -2,9 +2,13 @@
 #include "Entity.h"
 
 
-class Swimmer : Entity
+class Swimmer
 {
-public:
-	bool canMove(Map current_map, Vector2 direction) override;
+	int oxygen = 3;
+
+	void breathing(int oxygen);
+
+	bool canSwim(int oxygen);
+
 };
 

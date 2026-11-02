@@ -4,6 +4,7 @@
 
 class ZombieSwimmer : Zombie,Swimmer
 {
-	
+	bool can_entity_swim = true;
+
 };
 

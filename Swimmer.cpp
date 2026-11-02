@@ -1,6 +1,10 @@
 #include "Swimmer.h"
 
-bool Swimmer::canMove(Map current_map, Vector2 direction)
+void Swimmer::breathing(int oxygen)
 {
-    return true;
+}
+
+bool Swimmer::canSwim(int oxygen)
+{
+	return false;
 }
