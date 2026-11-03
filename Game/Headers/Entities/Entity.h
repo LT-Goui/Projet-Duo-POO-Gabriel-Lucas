@@ -5,20 +5,25 @@
 
 class Entity
 {
-	public:
-		int health = 0;
-		int attack = 0;
-		bool can_entity_swim = false;
+public:
 
-		Vector2 position = Vector2{ 0,0 };
 
-		void damage(int amount);
+	Vector2 position = Vector2{ 0,0 };
 
-		virtual void kill() = 0;
+	void damage(int amount);
 
-		virtual bool canMove(Map current_map,Vector2 direction,bool can_swim);
+	//virtual void kill() = 0;
 
-		virtual void moveInDirection(Map current_map, Vector2 direction);
+	virtual bool canMove(Map current_map,Vector2 direction,bool can_swim);
+
+	virtual void moveInDirection(Map current_map, Vector2 direction);
+
+protected:		
+
+	int health = 0;
+	int attack = 0;
+	bool can_entity_swim = false;
+
 
 };
 

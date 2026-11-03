@@ -6,12 +6,22 @@
 
 class Map
 {
+
 public:
-	Tile TileMetadata[4] = { Tile('.',true,false), Tile('~',false,true), Tile('A',false,false), Tile('E',true,true)};
+	std::vector<int> data = {
+	0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,1,0,0,1,0,0,
+	0,0,0,1,1,0,1,0,0,0,
+	2,0,0,0,1,1,1,0,2,2,
+	0,2,2,0,0,1,1,1,1,0,
+	2,2,2,0,0,0,1,1,0,0,
+	2,2,0,0,0,0,0,1,1,0,
+	3,0,0,0,0,0,0,0,1,1,
+	2,2,2,2,0,0,0,0,1,0,
+	2,2,2,0,0,0,0,1,0,0
+	};
 
-	std::vector<int> data = {};
-
-	Vector2 size{ 0,0 };
+	Vector2 size{ 10,10 };
 
 	int getHeight();
 	int getWidth();
@@ -19,4 +29,11 @@ public:
 	Tile getTileType(int index);
 	Tile getTileAtPos(Vector2 pos);
 
+private:
+	Tile TileMetadata[4] = {
+		Tile('.',true,false),
+		Tile('~',false,true),
+		Tile('A',false,false),
+		Tile('E',true,true)
+	};
 };
