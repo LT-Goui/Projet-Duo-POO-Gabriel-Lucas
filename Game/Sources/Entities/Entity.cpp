@@ -1,6 +1,8 @@
 #include "../../Headers/Entities/Entity.h"
 #include "../../Headers/Map/Map.h"
 
+#include <iostream>
+
 void Entity::damage(int amount)
 {
 	int* entity_health = &this->health;
