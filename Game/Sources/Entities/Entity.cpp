@@ -27,7 +27,7 @@ bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)
 
 void Entity::moveInDirection(Map current_map, Vector2 direction)
 {
-	if (this->canMove(current_map, direction, this->can_entity_swim)) {
+	if (this->canMove(current_map, direction,this->can_entity_swim)) {
 		this->position = this->position + direction;
 	}
 
