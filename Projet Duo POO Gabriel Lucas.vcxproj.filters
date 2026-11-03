@@ -45,106 +45,103 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="WarriorMage.cpp">
-      <Filter>Fichiers sources\Entities\Players</Filter>
-    </ClCompile>
-    <ClCompile Include="Warrior.cpp">
-      <Filter>Fichiers sources\Entities\Players</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Fichiers sources\Entities\Players</Filter>
-    </ClCompile>
-    <ClCompile Include="Swimmer.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Fichiers sources\Entities\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Fichiers sources\Entities</Filter>
-    </ClCompile>
-    <ClCompile Include="ZombieSwimmer.cpp">
-      <Filter>Fichiers sources\Entities\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="Zombie.cpp">
-      <Filter>Fichiers sources\Entities\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="HeadlessZombie.cpp">
-      <Filter>Fichiers sources\Entities\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="Mage.cpp">
-      <Filter>Fichiers sources\Entities\Players</Filter>
-    </ClCompile>
-    <ClCompile Include="Display.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Fichiers sources\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Parser.cpp">
-      <Filter>Fichiers sources\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Tile.cpp">
-      <Filter>Fichiers sources\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Utilities.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="WarriorMage.h">
+    <ClInclude Include="Game\Headers\Entities\Enemies\Enemy.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\HeadlessZombie.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\Zombie.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\ZombieSwimmer.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Players\Mage.h">
       <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
     </ClInclude>
-    <ClInclude Include="Warrior.h">
+    <ClInclude Include="Game\Headers\Entities\Players\Player.h">
       <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="Game\Headers\Entities\Players\Warrior.h">
       <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
     </ClInclude>
-    <ClInclude Include="Swimmer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Game\Headers\Entities\Players\WarriorMage.h">
+      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="Game\Headers\Entities\Entity.h">
       <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    <ClInclude Include="Game\Headers\Entities\Swimmer.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="ZombieSwimmer.h">
-      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="Zombie.h">
-      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="HeadlessZombie.h">
-      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="Mage.h">
-      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
-    </ClInclude>
-    <ClInclude Include="Display.h">
+    <ClInclude Include="Game\Headers\Utils\Display.h">
       <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="Game\Headers\Utils\Game.h">
       <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Utilities.h">
+    <ClInclude Include="Game\Headers\Utils\Utilities.h">
       <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="Game\Headers\Map\Map.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
-    <ClInclude Include="Parser.h">
+    <ClInclude Include="Game\Headers\Map\Parser.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
-    <ClInclude Include="Tile.h">
+    <ClInclude Include="Game\Headers\Map\Tile.h">
       <Filter>Fichiers d%27en-tête\Map</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\Sources\Entities\Enemies\Enemy.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\HeadlessZombie.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\Zombie.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\ZombieSwimmer.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Mage.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Player.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Warrior.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\WarriorMage.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Entity.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Swimmer.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Display.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Game.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Utilities.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Map.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Parser.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Tile.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
