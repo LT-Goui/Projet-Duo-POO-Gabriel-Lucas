@@ -7,11 +7,9 @@ Tile Map::getTileType(int index)
 
 Tile Map::getTileAtPos(Vector2 pos)
 {
-	Tile tile('.',true);
-
 	int position = pos.x + pos.y * Map::getWidth();
 
-	tile = TileMetadata[data[position]];
+	Tile tile = TileMetadata[data[position]];
 
 	return tile;
 }

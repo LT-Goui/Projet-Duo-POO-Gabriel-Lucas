@@ -7,7 +7,7 @@
 class Map
 {
 public:
-	Tile TileMetadata[4] = { Tile('.',true), Tile('~',false), Tile('A',false), Tile('E',true)};
+	Tile TileMetadata[4] = { Tile('.',true,false), Tile('~',false,true), Tile('A',false,false), Tile('E',true,true)};
 
 	std::vector<int> data = {};
 

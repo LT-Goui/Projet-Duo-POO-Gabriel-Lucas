@@ -1,7 +1,8 @@
 #include "Tile.h"
 
-Tile::Tile(char tileName, bool traversable)
+Tile::Tile(char tileName, bool traversable,bool swimmable)
 {
 	name = tileName;
-	canGoThrough = traversable;
+	canWalkThrough = traversable;
+	canSwimThrough = swimmable;
 }

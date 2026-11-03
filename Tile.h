@@ -4,7 +4,8 @@ class Tile
 public :
 
 	char name='.';
-	bool canGoThrough = true;
+	bool canWalkThrough = true;
+	bool canSwimThrough = false;
 
 	enum TYPES {
 		GROUND = 0,
@@ -15,6 +16,6 @@ public :
 
 	};
 
-	Tile(char name, bool canGoThrough);
+	Tile(char name, bool canWalkThrough, bool canSwimThrough);
 };
 
