@@ -1,6 +1,6 @@
 #pragma once
 #include "Enemy.h"
-class HeadlessZombie : Enemy
+class HeadlessZombie : public Enemy
 {
 	void chooseDirection(Vector2 direction) override;
 };
