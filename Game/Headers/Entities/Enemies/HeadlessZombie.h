@@ -1,7 +1,10 @@
 #pragma once
 #include "Enemy.h"
-class HeadlessZombie : Enemy
+
+#include <random>
+
+class HeadlessZombie : public Enemy
 {
-	void chooseDirection(Vector2 direction) override;
+	Vector2 chooseDirection(Vector2 target) override;
 };
 

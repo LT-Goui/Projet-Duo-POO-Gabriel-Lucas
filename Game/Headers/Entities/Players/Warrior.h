@@ -3,6 +3,6 @@
 
 class Warrior : public Player
 {
-public:
-	void move();
+private	:
+	int health = 5;
 };

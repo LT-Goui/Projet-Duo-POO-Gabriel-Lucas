@@ -1,10 +1,24 @@
 #include "../../Headers/Entities/Swimmer.h"
 
-void Swimmer::breathing(int oxygen)
+void Swimmer::breathing()
 {
+	if (oxygen < 0)
+	{
+		hasEndurance = false;
+	}
+	else
+	{
+		oxygen--;
+	}
 }
 
-bool Swimmer::canSwim(int oxygen)
+void Swimmer::takeBreath()
 {
-	return false;
+	oxygen = maxOxygen;
 }
+
+bool Swimmer::canSwim()
+{
+	return hasEndurance;
+}
+

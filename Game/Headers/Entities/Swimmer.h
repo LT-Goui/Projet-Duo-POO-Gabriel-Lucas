@@ -4,11 +4,16 @@
 
 class Swimmer
 {
-	int oxygen = 3;
+public:
+	void breathing();
+	void takeBreath();
+	bool canSwim();
 
-	void breathing(int oxygen);
+private:
+	int maxOxygen = 3;
+	int oxygen = maxOxygen;
+	bool hasEndurance = true;
 
-	bool canSwim(int oxygen);
 
 };
 
