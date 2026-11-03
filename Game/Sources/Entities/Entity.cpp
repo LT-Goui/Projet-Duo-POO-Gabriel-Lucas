@@ -8,7 +8,7 @@ void Entity::damage(int amount)
 	if (*entity_health <= 0) {
 		*entity_health = 0;
 
-		this->kill();
+		//this->kill();
 	}
 
 }
@@ -16,13 +16,16 @@ void Entity::damage(int amount)
 bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)
 {
 	Vector2 target_position = this->position + direction;
+	if (this->can_entity_swim && current_map.getTileAtPos(target_position).canSwimThrough) {
+		return true;
+	}
 	return current_map.getTileAtPos(target_position).canWalkThrough;
 
 }
 
 void Entity::moveInDirection(Map current_map, Vector2 direction)
 {
-	if (this->canMove(current_map, direction)) {
+	if (this->canMove(current_map, direction, this->can_entity_swim)) {
 		this->position = this->position + direction;
 	}
 
