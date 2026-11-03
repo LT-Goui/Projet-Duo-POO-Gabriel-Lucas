@@ -145,6 +145,7 @@
     <ClInclude Include="Game\Headers\Utils\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game\main.cpp" />
     <ClCompile Include="Game\Sources\Entities\Enemies\Enemy.cpp" />
     <ClCompile Include="Game\Sources\Entities\Enemies\HeadlessZombie.cpp" />
     <ClCompile Include="Game\Sources\Entities\Enemies\Zombie.cpp" />
