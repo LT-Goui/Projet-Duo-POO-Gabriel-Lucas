@@ -1,24 +1,12 @@
 #include <iostream>
-#include "Headers/Map/Map.h"
-#include "Headers/Utils/Utilities.h"
-#include "Headers/Utils/Display.h"
+#include <conio.h>
+#include "Headers/Utils/Game.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Game& game = Game::getInstance();
 
-	//test affichage map
-    Map map;
-    map.size = { 5,5 };
-
-    for (int y = 0; y < map.getHeight(); ++y) {
-        for (int x = 0; x < map.getWidth(); ++x) {
-            map.data.push_back(0);
-        }
-    }
-
-    display(map);
-
-    int i;
-    std::cin >> i;
+	game.start();
+	game.loop();
+	game.end();
 }
