@@ -4,6 +4,6 @@
 class Enemy : public Entity
 {
 public:
-	virtual void chooseDirection(Vector2 direction);
+	virtual Vector2 chooseDirection(Vector2 target);
 };
 
