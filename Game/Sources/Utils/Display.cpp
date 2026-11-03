@@ -1,5 +1,5 @@
-#include "Map.h"
-#include "Tile.h"
+#include "../../Headers/Map/Map.h"
+#include "../../Headers/Map/Tile.h"
 #include <iostream>
 
 void display(Map map) {

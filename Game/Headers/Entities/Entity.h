@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Utilities.h"
-#include "Map.h"
+#include "../Utils/Utilities.h"
+#include "../Map/Map.h"
 
 class Entity
 {

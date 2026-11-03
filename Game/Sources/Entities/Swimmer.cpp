@@ -1,4 +1,4 @@
-#include "Swimmer.h"
+#include "../../Headers/Entities/Swimmer.h"
 
 void Swimmer::breathing(int oxygen)
 {

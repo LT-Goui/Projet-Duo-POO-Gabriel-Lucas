@@ -1,4 +1,4 @@
-#include "Map.h"
+#include "../../Headers/Map/Map.h"
 
 Tile Map::getTileType(int index)
 {

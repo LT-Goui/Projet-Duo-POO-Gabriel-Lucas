@@ -1,4 +1,4 @@
-#include "Tile.h"
+#include "../../Headers/Map/Tile.h"
 
 Tile::Tile(char tileName, bool traversable,bool swimmable)
 {

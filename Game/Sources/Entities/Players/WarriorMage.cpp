@@ -1,1 +1,1 @@
-#include "WarriorMage.h"
+#include "../../../Headers/Entities/Players/WarriorMage.h"

@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Map.h"
-#include "Utilities.h"
-#include "Display.h"
+#include "Headers/Map/Map.h"
+#include "Headers/Utils/Utilities.h"
+#include "Headers/Utils/Display.h"
 
 int main()
 {

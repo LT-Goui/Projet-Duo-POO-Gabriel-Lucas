@@ -1,5 +1,5 @@
-#include "Entity.h"
-#include "Map.h"
+#include "../../Headers/Entities/Entity.h"
+#include "../../Headers/Map/Map.h"
 
 void Entity::damage(int amount)
 {
