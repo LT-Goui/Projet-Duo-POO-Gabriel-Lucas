@@ -4,8 +4,12 @@
 class Enemy : public Entity
 {
 public:
-	using Entity::Entity;
 	virtual Vector2 chooseDirection(Vector2 target);
+
+	Enemy(Vector2 position) : Entity(position) {
+		this->position = position;
+	};
+
 	void kill() override {
 		std::cout << "ble";
 	 }

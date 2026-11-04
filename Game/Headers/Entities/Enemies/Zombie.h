@@ -2,6 +2,9 @@
 #include "Enemy.h"
 class Zombie : public Enemy
 {
-	using Enemy::Enemy;
+public:
+	Zombie(Vector2 position) : Enemy(position) {
+		this->position = position;
+	};
 };
 
