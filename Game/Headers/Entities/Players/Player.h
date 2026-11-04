@@ -8,6 +8,8 @@ class Player : public Entity
 
 public :
 	
+	char name = 'H';
+
 	void move();
 
 	bool canPlayerPlay();
