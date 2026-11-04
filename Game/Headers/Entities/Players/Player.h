@@ -19,4 +19,8 @@ public :
 	}
 
 	using Entity::Entity;
+
+	Player(Vector2 position) : Entity(position) {
+		this->position = position;
+	};
 };

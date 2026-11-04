@@ -20,7 +20,7 @@ public:
     void end();
 
     Map currentMap;
-    Player currentPlayer{ Vector2{1,1} };
+    Player currentPlayer{Vector2{1,1}};
     std::vector<Enemy> enemyGroup = {};
 
 private:
