@@ -20,7 +20,7 @@ public:
     void end();
 
     Map currentMap;
-    Player currentPlayer;
+    Player currentPlayer{ Vector2{1,1} };
 
 
 private:

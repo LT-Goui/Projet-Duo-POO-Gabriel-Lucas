@@ -6,7 +6,7 @@ void Game::start()
 	
 	currentMap.size = { 5,5 };
 
-	currentPlayer = {};
+	currentPlayer = Player{Vector2{1,1}};
 
 	for (int y = 0; y < currentMap.getHeight(); ++y) {
 		for (int x = 0; x < currentMap.getWidth(); ++x) {

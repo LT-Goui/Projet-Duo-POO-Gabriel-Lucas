@@ -10,7 +10,7 @@ public:
 
 	void damage(int amount);
 
-	//virtual void kill() = 0;
+	virtual void kill() = 0;
 
 	virtual bool canMove(Map current_map,Vector2 direction,bool can_swim);
 
