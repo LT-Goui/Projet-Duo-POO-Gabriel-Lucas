@@ -20,7 +20,7 @@ public:
             return 404;
         }
 
-        fileReader(file);
+        fileReader(file,map);
 
     }
 
@@ -34,13 +34,13 @@ private:
         path += ".txt";
     }
 
-    int fileReader(std::ifstream openedFile, Map map) {
+    int fileReader(std::ifstream& openedFile, Map map) {
         std::string line;
         int rows = 0;
         while (std::getline(openedFile, line)) {
             int columns = 0;
             for (char& c : line) {
-                mapInscriber(map, c);
+                mapInscriber(map, c, rows, columns);
                 columns += 1;
             }
             if (columns != 20) {
@@ -52,7 +52,7 @@ private:
 
 };
 
-void mapInscriber(Map map, char* dataRead, int currentRow, int currentColumn ) {
+void mapInscriber(Map map, char dataRead, int currentRow, int currentColumn ) {
     if (dataRead == 'H') { //H
         hero.position = position;
         hero.vie = 1;
