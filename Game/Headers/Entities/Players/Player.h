@@ -15,4 +15,6 @@ public :
 	void kill() override {
 
 	}
+
+	using Entity::Entity;
 };

@@ -6,5 +6,7 @@
 class HeadlessZombie : public Enemy
 {
 	Vector2 chooseDirection(Vector2 target) override;
+
+	using Enemy::Enemy;
 };
 

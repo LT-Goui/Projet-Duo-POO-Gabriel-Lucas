@@ -7,5 +7,7 @@ class ZombieSwimmer : public Zombie, public Swimmer
 public :
 	bool can_entity_swim = true;
 	void moveInDirection(Map current_map, Vector2 direction) override;
+
+	using Enemy::Entity;
 };
 
