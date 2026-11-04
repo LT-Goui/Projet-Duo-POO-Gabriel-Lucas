@@ -6,8 +6,6 @@
 class Entity
 {
 public:
-
-
 	Vector2 position = Vector2{ 0,0 };
 
 	void damage(int amount);
@@ -17,6 +15,8 @@ public:
 	virtual bool canMove(Map current_map,Vector2 direction,bool can_swim);
 
 	virtual void moveInDirection(Map current_map, Vector2 direction);
+
+	Entity(Vector2 position);
 
 protected:		
 

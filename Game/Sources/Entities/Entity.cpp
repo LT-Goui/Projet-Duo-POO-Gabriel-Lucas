@@ -32,3 +32,8 @@ void Entity::moveInDirection(Map current_map, Vector2 direction)
 	}
 
 }
+
+Entity::Entity(Vector2 position)
+{
+	this->position = position;
+}
