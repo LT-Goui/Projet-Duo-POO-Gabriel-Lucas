@@ -4,6 +4,9 @@
 class Enemy : public Entity
 {
 public:
+
+	char name = 'E';
+
 	virtual Vector2 chooseDirection(Vector2 target);
 
 	Enemy(Vector2 position) : Entity(position) {

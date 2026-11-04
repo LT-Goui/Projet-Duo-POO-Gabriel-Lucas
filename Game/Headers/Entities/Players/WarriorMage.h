@@ -4,6 +4,8 @@
 
 class WarriorMage : public Warrior, public Mage
 {
+public:
+	char name = 'S';
 private:
 	int health = 4;
 };
