@@ -12,6 +12,7 @@ Vector2 Zombie::getRandomDirection()
 
     switch (random_direction)
     {
+
         case 0:
             return Vector2{ 0,-1 };
         case 1:
@@ -40,12 +41,17 @@ bool Zombie::isPlayerInRange(Vector2 playerPosition, int range)
 
 void Zombie::move(Map current_map, Vector2 playerPosition)
 {
+    Vector2 direction = Vector2{ 0,0 };
+
 	if (isPlayerInRange(playerPosition, this->range)) {
 		Vector2 direction = getDirectionToTarget(playerPosition);
 		moveInDirection(current_map, direction);
 	}
 	else {
-		Vector2 direction = getRandomDirection();
+
+        do {
+            direction = getRandomDirection();
+        } while (!canMove(current_map, direction, false));
 		moveInDirection(current_map, direction);
 	}
 }

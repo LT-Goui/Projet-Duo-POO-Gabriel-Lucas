@@ -21,6 +21,10 @@ bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)
 {
 	Vector2 target_position = this->position + direction;
 
+	if (direction == Vector2{ 0,0 }) {
+		return false;
+	}
+
 	if (target_position.x < 0 || target_position.y < 0 ) {
 		return false;
 	}

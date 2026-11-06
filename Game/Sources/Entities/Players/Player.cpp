@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-void Player::move(Map current_map, Vector2 direction) {
+void Player::move(Map current_map, Vector2 target) {
 
-	if (direction != Vector2{ 0,0 }) {
-		this->moveInDirection(current_map, direction);
+	if (target != Vector2{ 0,0 }) {
+		this->moveInDirection(current_map, target);
 	}
 }
 

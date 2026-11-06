@@ -20,6 +20,3 @@ Vector2 Enemy::getDirectionToTarget(Vector2 target) {
     return Vector2{ 0,0 };
 }
 
-void Enemy::move(Map current_map, Vector2 target)
-{
-}

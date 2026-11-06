@@ -18,7 +18,7 @@ public:
 
 	virtual void moveInDirection(Map current_map, Vector2 direction);
 
-	explicit Entity(Vector2 position);
+	Entity(Vector2 position);
 
 protected:		
 

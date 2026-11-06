@@ -1,7 +1,7 @@
 #include "../../Headers/Utils/Display.h"
 #include <iostream>
 
-void displayAll(Map map, Player player, std::vector<Enemy> enemyGroup) {
+void displayAll(Map map, Player player, std::vector<Enemy*> enemyGroup) {
 
     char* screen = new char[map.getHeight() * map.getWidth()];
 
@@ -30,10 +30,10 @@ void displayPlayer(char* screenPlayer, Map map, Player player)
     screenPlayer[player.position.x + (player.position.y * map.getHeight())] = player.name;
 }
 
-void displayEnemies(char* screenEnemies, Map map, std::vector<Enemy> enemyGroup)
+void displayEnemies(char* screenEnemies, Map map, std::vector<Enemy*> enemyGroup)
 {
     for (int s = 0; s < enemyGroup.size(); s++) {
-        screenEnemies[enemyGroup[s].position.x + (enemyGroup[s].position.y * map.getHeight())] = enemyGroup[s].name;
+        screenEnemies[enemyGroup[s]->position.x + (enemyGroup[s]->position.y * map.getHeight())] = enemyGroup[s]->name;
     }
 }
 

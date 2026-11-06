@@ -9,7 +9,8 @@ void Game::start()
 
 	currentPlayer = Player{Vector2{1,1}};
 
-	enemyGroup.push_back(Zombie{Vector2{0,0}});
+	enemyGroup.push_back(new Zombie{Vector2{0,0}});
+	enemyGroup.push_back(new Zombie{Vector2{5,7}});
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }
@@ -17,6 +18,7 @@ void Game::start()
 void Game::loop()
 {
 	while (running) {
+		displayAll(currentMap, currentPlayer, enemyGroup);
 		char input = _getch();
 		system("cls");
 		Vector2 playerDirection = currentPlayer.inputMovePlayer(input);
@@ -24,7 +26,7 @@ void Game::loop()
 		displayAll(currentMap,currentPlayer,enemyGroup);
 
 		for (int i = 0; i < enemyGroup.size(); i++) {
-			enemyGroup[i].move(currentMap, currentPlayer.position);
+			enemyGroup[i]->move(currentMap, currentPlayer.position);
 		}
 
 		displayAll(currentMap, currentPlayer, enemyGroup);
