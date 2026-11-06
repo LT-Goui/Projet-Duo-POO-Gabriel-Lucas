@@ -163,6 +163,10 @@
     <ClCompile Include="Game\Sources\Utils\Game.cpp" />
     <ClCompile Include="Game\Sources\Utils\Utilities.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Game\Maps\level01.txt" />
+    <Text Include="Game\Maps\level02.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

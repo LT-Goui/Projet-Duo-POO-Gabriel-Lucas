@@ -4,7 +4,9 @@ void Game::start()
 {
 	std::cout << "Hello World!\n";
 	
-	currentMap.size = { 10,10 };
+	currentMap.size = { 20,10 };
+
+	mapParser.chargementMap(currentMap);
 
 	currentPlayer = Player{Vector2{1,1}};
 

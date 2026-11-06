@@ -14,6 +14,8 @@ Tile Map::getTileAtPos(Vector2 pos)
 	return tile;
 }
 
+
+
 int Map::getHeight() {
 	return (size.y);
 }

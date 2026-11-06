@@ -5,6 +5,7 @@
 #include "../Utils/Utilities.h"
 #include "../Utils/Display.h"
 #include "../Entities/Players/Player.h"
+#include "../Map/Parser.h"
 
 //Le Singleton
 class Game
@@ -20,6 +21,7 @@ public:
     void end();
 
     Map currentMap;
+    Parser mapParser;
     Player currentPlayer{Vector2{1,1}};
     std::vector<Enemy> enemyGroup = {};
 
