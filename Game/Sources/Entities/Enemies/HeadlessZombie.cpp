@@ -2,7 +2,7 @@
 
 #include <random>
 
-Vector2 HeadlessZombie::chooseDirection(Vector2 target)
+Vector2 HeadlessZombie::getDirectionToTarget(Vector2 target)
 {
     static std::random_device rd;
     static std::mt19937 gen(rd());
@@ -20,7 +20,7 @@ Vector2 HeadlessZombie::chooseDirection(Vector2 target)
         return Vector2{ 0,1 };
 
     }
-    else if (random_direction == 3) {
+    else {
         return Vector2{ 0,1 };
     }
 }

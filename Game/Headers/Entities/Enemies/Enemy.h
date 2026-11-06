@@ -5,9 +5,11 @@ class Enemy : public Entity
 {
 public:
 
-	char name = 'E';
+	char name = '@';
 
-	virtual Vector2 chooseDirection(Vector2 target);
+	virtual Vector2 getDirectionToTarget(Vector2 target);
+
+	void move(Map current_map, Vector2 target);
 
 	Enemy(Vector2 position) : Entity(position) {
 		this->position = position;

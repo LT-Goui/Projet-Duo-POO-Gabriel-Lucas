@@ -12,6 +12,8 @@ public:
 
 	virtual void kill() = 0;
 
+	virtual void move(Map current_map, Vector2 target) = 0;
+
 	virtual bool canMove(Map current_map,Vector2 direction,bool can_swim);
 
 	virtual void moveInDirection(Map current_map, Vector2 direction);
@@ -23,7 +25,6 @@ protected:
 	int health = 0;
 	int attack = 0;
 	bool can_entity_swim = false;
-
 
 
 };

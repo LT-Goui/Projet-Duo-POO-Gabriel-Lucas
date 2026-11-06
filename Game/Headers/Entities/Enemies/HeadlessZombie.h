@@ -5,8 +5,10 @@
 
 class HeadlessZombie : public Enemy
 {
-	Vector2 chooseDirection(Vector2 target) override;
+	Vector2 getDirectionToTarget(Vector2 target) override;
 
-	using Enemy::Enemy;
+	HeadlessZombie(Vector2 position) : Enemy(position) {
+		this->position = position;
+	};
 };
 

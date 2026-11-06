@@ -8,6 +8,8 @@ public :
 	bool can_entity_swim = true;
 	void moveInDirection(Map current_map, Vector2 direction) override;
 
-	using Zombie::Zombie;
+	ZombieSwimmer(Vector2 position) : Zombie(position) {
+		this->position = position;
+	};
 };
 

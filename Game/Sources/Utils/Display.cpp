@@ -9,6 +9,7 @@ void displayAll(Map map, Player player, std::vector<Enemy> enemyGroup) {
     displayEnemies(screen,map,enemyGroup);
     displayPlayer(screen,map,player);
 
+    system("cls");
     printToScreen(screen, map);
 
     delete[] screen;

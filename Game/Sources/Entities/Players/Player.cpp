@@ -1,23 +1,42 @@
 #include "../../../Headers/Entities/Players/Player.h"
 
-void Player::inputMovePlayer(char input)
+#include <iostream>
+
+void Player::move(Map current_map, Vector2 direction) {
+
+	if (direction != Vector2{ 0,0 }) {
+		this->moveInDirection(current_map, direction);
+	}
+}
+
+Vector2 Player::inputMovePlayer(char input)
 {
 	std::cout << "The entered character is : " << input << " \n";
 	switch (input) {
 	case 'z':
-		std::cout << "z \n"; 
+		std::cout << "z \n";
+		return Vector2{ 0,-1 };
 		break;
 	case 'q':
-		std::cout << "q \n"; 
+		std::cout << "q \n";
+		return Vector2{ -1,0 };
 		break;
 	case 's':
 		std::cout << "s \n";
+		return Vector2{ 0,1 };
 		break;
 	case 'd':
 		std::cout << "d \n";
+		return Vector2{ 1,0 };
 		break;
 	default:
+		return Vector2{ 0,0 };
 		std::cout << "Touche non repertoriee \n";
 		break;
 	}
+}
+
+void Player::kill()
+{
+	std::cout << "Player has been killed!" << std::endl;
 }

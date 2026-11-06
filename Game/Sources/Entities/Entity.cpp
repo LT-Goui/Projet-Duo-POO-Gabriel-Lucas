@@ -15,12 +15,24 @@ void Entity::damage(int amount)
 
 }
 
+
+
 bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)
 {
 	Vector2 target_position = this->position + direction;
+
+	if (target_position.x < 0 || target_position.y < 0 ) {
+		return false;
+	}
+	else if (target_position.x >= current_map.getWidth() || target_position.y >= current_map.getHeight())
+	{
+		return false;
+	}
+
 	if (this->can_entity_swim && current_map.getTileAtPos(target_position).canSwimThrough) {
 		return true;
 	}
+
 	return current_map.getTileAtPos(target_position).canWalkThrough;
 
 }

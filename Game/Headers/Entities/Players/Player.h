@@ -10,13 +10,11 @@ public :
 	
 	char name = 'H';
 
-	void move();
+	void move(Map current_map, Vector2 direction) override;
 
 	bool canPlayerPlay();
-	void inputMovePlayer(char input);
-	void kill() override {
-
-	}
+	Vector2 inputMovePlayer(char input);
+	void kill() override;
 
 	using Entity::Entity;
 
