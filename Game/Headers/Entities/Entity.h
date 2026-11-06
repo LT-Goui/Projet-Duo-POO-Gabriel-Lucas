@@ -20,11 +20,15 @@ public:
 
 	Entity(Vector2 position);
 
-protected:		
+	char getName();
+
+protected:
+	char name = '$';
 
 	int health = 0;
 	int attack = 0;
 	bool can_entity_swim = false;
+
 
 
 };

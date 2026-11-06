@@ -10,6 +10,10 @@ public :
 
 	ZombieSwimmer(Vector2 position) : Zombie(position) {
 		this->position = position;
+		this->name = newName;
 	};
+
+private:
+	char newName = '&';
 };
 

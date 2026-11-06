@@ -34,11 +34,11 @@ protected:
 
 	Vector2 getRandomDirection();
 
-	int range = 5;
+	int range = 4;
 
 public:
 
-	char name = 'X';
+	char newName = 'Z';
 
 	void move(Map current_map, Vector2 playerPosition) override;
 
@@ -46,9 +46,7 @@ public:
 
 	Zombie(Vector2 position) : Enemy(position) {
 		this->position = position;
-	};
-
-
-		
+		this->name = newName;
+	};		
 };
 

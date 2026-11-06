@@ -5,8 +5,6 @@ class Enemy : public Entity
 {
 public:
 
-	char name = '@';
-
 	virtual Vector2 getDirectionToTarget(Vector2 target);
 
 	//virtual void move(Map current_map, Vector2 target) override;

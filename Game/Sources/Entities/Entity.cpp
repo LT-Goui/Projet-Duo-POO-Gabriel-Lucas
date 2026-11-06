@@ -53,3 +53,8 @@ Entity::Entity(Vector2 position)
 {
 	this->position = position;
 }
+
+char Entity::getName()
+{
+	return this->name;
+}

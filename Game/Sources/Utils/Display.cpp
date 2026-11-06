@@ -33,7 +33,7 @@ void displayPlayer(char* screenPlayer, Map map, Player player)
 void displayEnemies(char* screenEnemies, Map map, std::vector<Enemy*> enemyGroup)
 {
     for (int s = 0; s < enemyGroup.size(); s++) {
-        screenEnemies[enemyGroup[s]->position.x + (enemyGroup[s]->position.y * map.getHeight())] = enemyGroup[s]->name;
+        screenEnemies[enemyGroup[s]->position.x + (enemyGroup[s]->position.y * map.getHeight())] = enemyGroup[s]->getName();
     }
 }
 

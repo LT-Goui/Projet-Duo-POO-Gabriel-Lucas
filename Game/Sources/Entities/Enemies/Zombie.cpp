@@ -12,7 +12,6 @@ Vector2 Zombie::getRandomDirection()
 
     switch (random_direction)
     {
-
         case 0:
             return Vector2{ 0,-1 };
         case 1:
