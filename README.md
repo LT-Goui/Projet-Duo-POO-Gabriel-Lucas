@@ -1,25 +1,24 @@
 # Projet Duo POO Gabriel Lucas
 
-Coécrit par Gabriel Sebille et Lucas-Tao Goui
+CoÃ©crit par Gabriel Sebille et Lucas-Tao Goui
 
 ---
-## Checklist
+## Sur quelle fichier avons nous travailler ?
 
-Fait
+### Gabriel
+Entity : Zombie, Zombie Swimmer, Headless Zombie
+Player : Attacks
+Utilities
+Game : Spell
+Tile
 
-Zombie classique fonctionne
-Hero bouge
-Affichage Map
-Terrain solide
-
-à Faire 
-
-Headless Zombie
-Zombie Swimmer
-Swimmer
-Changement Niveau
-Attaque Personnage
-écran de fin/mort/victoire
-
+### Lucas
+Entity : Swimmer, Zombie, Zombie Swimmer, Headless Zombie
+Player : Move, Types
+Map
+Display
+Game
+Main
+Parser (deprecated)
 
 ---
