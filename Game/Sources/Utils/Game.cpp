@@ -164,7 +164,7 @@ void Game::loop()
 				gameOver();
 			}
 		}
-		else if (currentMap.getTileAtPos(currentPlayer.position).name == 'E') {
+		if (currentMap.getTileAtPos(currentPlayer.position).name == 'E') {
 			changeLevel();
 		}
 

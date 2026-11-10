@@ -8,12 +8,6 @@ public:
 
 	Warrior(Vector2 position);
 
-	//Warrior(Vector2 position) : Player(position) {
-	//	this->position = position;
-	//	this->name = warriorName;
-	//	this->health = warriorHealth;
-	//};
-
 protected	:
 	int warriorHealth = 5;
 	

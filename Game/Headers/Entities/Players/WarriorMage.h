@@ -10,9 +10,7 @@ public:
 	WarriorMage(Vector2 position);
 
 	//WarriorMage(Vector2 position) : Player(position), Warrior(position), Mage(position) {
-	//	this->position = position;
-	//	this->name = sorcererName;
-	//	this->health = sorcererHealth;
+
 	//};
 
 private:

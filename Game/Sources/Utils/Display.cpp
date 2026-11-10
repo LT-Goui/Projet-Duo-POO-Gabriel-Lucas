@@ -44,6 +44,7 @@ void printMenu(Player player)
     std::cout <<" Q     : Avancer vers la gauche \n";
     std::cout <<" S     : Avancer vers la droite \n";
     std::cout <<" D     : Avancer vers le bas \n";
+    if( !player.current_type == Player::playerType::Warrior)
     std::cout <<" SPACE : Lancer un sort \n";
 }
 

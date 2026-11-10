@@ -3,4 +3,6 @@
 Warrior::Warrior(Vector2 position) : Player(position) {
 	this->position = position;
 	this->current_type = playerType::Warrior;
+	this->name = warriorName;
+	this->health = warriorHealth;
 }

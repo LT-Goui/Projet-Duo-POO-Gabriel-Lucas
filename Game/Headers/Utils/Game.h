@@ -18,8 +18,9 @@ public:
         return obj;
     }
 
-    void start();
     int getEnemyIndex(Enemy* target);
+
+    void start();
     void loop();
     void end();
 
