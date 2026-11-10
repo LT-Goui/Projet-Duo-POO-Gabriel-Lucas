@@ -10,8 +10,9 @@ public:
 	WarriorMage(Vector2 position) : Player(position),Warrior(position),Mage(position) {
 		this->position = position;
 		this->name = sorcererName;
+		this->health = sorcererHealth;
 	};
 
 private:
-	int health = 4;
+	int sorcererHealth = 3;
 };

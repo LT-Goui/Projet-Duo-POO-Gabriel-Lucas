@@ -9,9 +9,10 @@ public:
 	Warrior(Vector2 position) : Player(position) {
 		this->position = position;
 		this->name = warriorName;
+		this->health = warriorHealth;
 	};
 
-private	:
-	int health = 10;
+protected	:
+	int warriorHealth = 5;
 	
 };

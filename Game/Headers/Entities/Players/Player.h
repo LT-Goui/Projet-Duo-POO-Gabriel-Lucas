@@ -19,7 +19,6 @@ public :
 
 	void move(Map current_map, Vector2 target) override;
 
-	bool canPlayerPlay();
 	Vector2 inputMovePlayer(char input);
 	void kill() override;
 
