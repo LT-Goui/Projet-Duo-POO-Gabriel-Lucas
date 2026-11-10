@@ -4,13 +4,14 @@
 class Warrior : virtual public Player
 {
 public:
-	char name = 'W';
+	char warriorName = 'W';
 
 	Warrior(Vector2 position) : Player(position) {
 		this->position = position;
+		this->name = warriorName;
 	};
 
 private	:
-	int health = 5;
+	int health = 10;
 	
 };
