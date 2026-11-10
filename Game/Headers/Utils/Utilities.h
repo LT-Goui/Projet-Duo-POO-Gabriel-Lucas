@@ -20,6 +20,5 @@ class Vector2 {
 
 		friend bool operator != (const Vector2& obj1, const Vector2& obj2);
 
-    //private : 
 
 };

@@ -14,6 +14,11 @@ Tile Map::getTileAtPos(Vector2 pos)
 	return tile;
 }
 
+Tile* Map::getTileMetadata()
+{
+	return TileMetadata;
+}
+
 Map::Map(std::vector<int> dataInput) {
 	data = dataInput;
 }

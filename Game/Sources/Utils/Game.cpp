@@ -4,6 +4,8 @@
 #include "../../Headers/Entities/Enemies/ZombieSwimmer.h"
 
 
+
+
 void Game::start()
 {
 	std::cout << "Hello World!\n";
@@ -18,6 +20,14 @@ void Game::start()
 	changeLevel();
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
+}
+
+int Game::getEnemyIndex(Enemy* target) {
+	for (int i = 0; i < enemyGroup.size(); i++) {
+		if (enemyGroup[i] == target) {
+			return i;
+		}
+	}
 }
 
 bool Game::isEnemyAtPos(Vector2 pos) {
@@ -38,20 +48,52 @@ Enemy* Game::getEnemyAtPos(Vector2 pos) {
 	return nullptr;
 }
 
-void Game::playerMovement()
+void Game::attackEnemyInSpellRange(Player* player)
+{
+	for (int i = 0; i < player->attackDirection.size(); i++) {
+
+		Vector2 attackDirection = player->attackDirection[i];
+		Vector2 targetPosition = currentPlayer.position + attackDirection;
+		if (isEnemyAtPos(targetPosition)) {
+			Enemy* targetEnemy = getEnemyAtPos(targetPosition);
+			targetEnemy->damage(1);
+			if (targetEnemy->getHealth() <= 0) {
+				enemyGroup.erase(enemyGroup.begin() + getEnemyIndex(targetEnemy));
+			}
+		}
+
+	}
+
+}
+
+void Game::attackEnemyInMeleeRange(Warrior* player)
+{
+	if (isEnemyAtPos(currentPlayer.position)) {
+		getEnemyAtPos(currentPlayer.position)->damage(1);
+	}
+}
+
+
+void Game::playerInput()
 {
 	char input = _getch();
 	system("cls");
 	Vector2 playerDirection = currentPlayer.inputMovePlayer(input);
+	if (input == ' ' && (currentPlayer.current_type == Player::playerType::Mage || currentPlayer.current_type == Player::playerType::WarriorMage)) {
+		attackEnemyInSpellRange(&currentPlayer);
+
+	}
+
 	currentPlayer.move(currentMap, playerDirection);
 }
 
 void Game::loop()
 {
 	while (running) {
+		
 		displayAll(currentMap, currentPlayer, enemyGroup);
 
-		playerMovement();
+		playerInput();
 
 		displayAll(currentMap,currentPlayer,enemyGroup);
 
@@ -66,7 +108,7 @@ void Game::loop()
 				gameOver();
 			}
 		}
-		else if (currentMap.getTileAtPos(currentPlayer.position).name == 'E') {
+		else if (currentMap.getTileAtPos(currentPlayer.position).name == currentMap.getTileMetadata()[3].name) {
 			victory();
 		}
 
@@ -93,7 +135,6 @@ void Game::gameOver()
 	running = false;
 	system("cls");
 	std::cout << "Game Over!" << std::endl;
-	end();
 }
 
 void Game::victory()
@@ -101,7 +142,6 @@ void Game::victory()
 	running = false;
 	system("cls");
 	std::cout << "You win!" << std::endl;
-	end();
 }
 
 void Game::chooseCharacter() {
@@ -130,7 +170,3 @@ void Game::chooseCharacter() {
 	}
 }
 
-void Game::attackEnemyInRange()
-{
-
-}

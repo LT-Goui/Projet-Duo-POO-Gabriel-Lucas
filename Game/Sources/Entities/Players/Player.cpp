@@ -30,8 +30,8 @@ Vector2 Player::inputMovePlayer(char input)
 		return Vector2{ 1,0 };
 		break;
 	default:
-		return Vector2{ 0,0 };
 		std::cout << "Touche non repertoriee \n";
+		return Vector2{ 0,0 };
 		break;
 	}
 }
@@ -39,4 +39,8 @@ Vector2 Player::inputMovePlayer(char input)
 void Player::kill()
 {
 	std::cout << "Player has been killed!" << std::endl;
+}
+
+Player::Player(Vector2 position) : Entity(position) {
+	this->position = position;
 }

@@ -31,6 +31,8 @@ public:
 	Tile getTileType(int index);
 	Tile getTileAtPos(Vector2 pos);
 
+	Tile* getTileMetadata();
+
 private:
 	Tile TileMetadata[4] = {
 		Tile('.',true,false),

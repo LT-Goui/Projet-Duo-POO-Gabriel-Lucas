@@ -7,9 +7,7 @@ class WarriorMage : public Warrior, public Mage
 public:
 	char name = 'S';
 
-	WarriorMage(Vector2 position) : Player(position),Warrior(position),Mage(position) {
-		this->position = position;
-	};
+	WarriorMage(Vector2 position);;
 
 private:
 	int health = 4;

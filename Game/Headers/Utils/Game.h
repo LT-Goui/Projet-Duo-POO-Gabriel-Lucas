@@ -19,6 +19,7 @@ public:
     }
 
     void start();
+    int getEnemyIndex(Enemy* target);
     void loop();
     void end();
 
@@ -89,11 +90,13 @@ private:
 
     Enemy* getEnemyAtPos(Vector2 pos);
 
-    void playerMovement();
+    void playerInput();
 
     void gameOver();
     void victory();
     void chooseCharacter();
-    void attackEnemyInRange();
+
+    void attackEnemyInSpellRange(Player* player);
+    void attackEnemyInMeleeRange(Warrior* player);
 	
 };
