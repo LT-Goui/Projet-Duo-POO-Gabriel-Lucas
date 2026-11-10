@@ -14,6 +14,10 @@ Tile Map::getTileAtPos(Vector2 pos)
 	return tile;
 }
 
+Map::Map(std::vector<int> dataInput) {
+	data = dataInput;
+}
+
 int Map::getHeight() {
 	return (size.y);
 }

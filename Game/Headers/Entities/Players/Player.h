@@ -29,5 +29,5 @@ public :
 		this->position = position;
 	};
 
-	virtual void attack() = 0;
+
 };

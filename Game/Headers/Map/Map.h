@@ -21,6 +21,8 @@ public:
 	2,2,2,0,0,0,0,1,0,0
 	};
 
+	Map(std::vector<int> dataInput);
+
 	Vector2 size{ 10,10 };
 
 	int getHeight();

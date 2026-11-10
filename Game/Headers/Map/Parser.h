@@ -4,6 +4,7 @@
 
 #include "Map.h"
 
+//deprecated
 
 class Parser
 {

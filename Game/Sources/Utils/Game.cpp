@@ -7,13 +7,15 @@
 void Game::start()
 {
 	std::cout << "Hello World!\n";
-	
+
 	currentMap.size = { 10,10 };
 
 	chooseCharacter();
 
 	enemyGroup.push_back(new HeadlessZombie{Vector2{0,0}});
 	enemyGroup.push_back(new ZombieSwimmer{Vector2{9,6}});
+
+	changeLevel();
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }
@@ -118,4 +120,9 @@ void Game::chooseCharacter() {
 			break;
 		}
 	}
+}
+
+void Game::attackEnemyInRange()
+{
+
 }
