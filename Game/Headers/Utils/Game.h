@@ -37,7 +37,6 @@ public:
      } };
 
     Player currentPlayer{Vector2{1,1}};
-    Map currentMap;
     std::vector<Enemy*> enemyGroup = {};
 
     void changeLevel();

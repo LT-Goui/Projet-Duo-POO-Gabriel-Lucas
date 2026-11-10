@@ -77,6 +77,14 @@ void Game::end()
 	}
 }
 
+void Game::changeLevel()
+{
+	currentMap = mapList[currentLevel];
+	currentLevel += 1;
+	// à rajouter, changement d'ennemis et player
+
+}
+
 void Game::gameOver()
 {
 	running = false;
