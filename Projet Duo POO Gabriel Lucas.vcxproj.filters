@@ -13,9 +13,137 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entities">
+      <UniqueIdentifier>{65504564-f2b2-4efe-b3c1-e06cdba83a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entities\Enemies">
+      <UniqueIdentifier>{2db2afba-7a1b-46ce-a85c-2a1132437e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entities\Players">
+      <UniqueIdentifier>{6300de1c-5003-4f51-8bf2-e7f204f542e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entities">
+      <UniqueIdentifier>{1f404f4c-5401-4c1f-8824-f8fd379d6f3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entities\Enemies">
+      <UniqueIdentifier>{06839357-0249-4f15-99e8-5b16a677b0bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entities\Players">
+      <UniqueIdentifier>{e11c67c6-7565-4e7a-b802-52816ba0fcc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Map">
+      <UniqueIdentifier>{32c8ae4c-1fb7-43bf-8216-86ad4cf20caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Game">
+      <UniqueIdentifier>{ceac15a3-8cd7-47f1-9112-434af47cc6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Map">
+      <UniqueIdentifier>{3297234c-6409-4f2b-ab38-1efb7c937ec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Game">
+      <UniqueIdentifier>{8ebecafa-3872-4c49-a735-8f3d61085509}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Projet Duo POO Gabriel Lucas.cpp">
+    <ClInclude Include="Game\Headers\Entities\Enemies\Enemy.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\HeadlessZombie.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\Zombie.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Enemies\ZombieSwimmer.h">
+      <Filter>Fichiers d%27en-tête\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Players\Mage.h">
+      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Players\Player.h">
+      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Players\Warrior.h">
+      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Players\WarriorMage.h">
+      <Filter>Fichiers d%27en-tête\Entities\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Entity.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Entities\Swimmer.h">
+      <Filter>Fichiers d%27en-tête\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Utils\Display.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Utils\Game.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Utils\Utilities.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Map\Map.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Map\Parser.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Headers\Map\Tile.h">
+      <Filter>Fichiers d%27en-tête\Map</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\Sources\Entities\Enemies\Enemy.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\HeadlessZombie.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\Zombie.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Enemies\ZombieSwimmer.cpp">
+      <Filter>Fichiers sources\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Mage.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Player.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\Warrior.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Players\WarriorMage.cpp">
+      <Filter>Fichiers sources\Entities\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Entity.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Entities\Swimmer.cpp">
+      <Filter>Fichiers sources\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Display.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Game.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Utils\Utilities.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Map.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Parser.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Sources\Map\Tile.cpp">
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

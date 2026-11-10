@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PublicIncludeDirectories>Game;Entities;Map;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <PublicModuleDirectories>Game;Entities;Map;$(PublicModuleDirectories)</PublicModuleDirectories>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -102,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +128,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Projet Duo POO Gabriel Lucas.cpp" />
+    <ClInclude Include="Game\Headers\Entities\Enemies\Enemy.h" />
+    <ClInclude Include="Game\Headers\Entities\Enemies\HeadlessZombie.h" />
+    <ClInclude Include="Game\Headers\Entities\Enemies\Zombie.h" />
+    <ClInclude Include="Game\Headers\Entities\Enemies\ZombieSwimmer.h" />
+    <ClInclude Include="Game\Headers\Entities\Entity.h" />
+    <ClInclude Include="Game\Headers\Entities\Players\Mage.h" />
+    <ClInclude Include="Game\Headers\Entities\Players\Player.h" />
+    <ClInclude Include="Game\Headers\Entities\Players\Warrior.h" />
+    <ClInclude Include="Game\Headers\Entities\Players\WarriorMage.h" />
+    <ClInclude Include="Game\Headers\Entities\Swimmer.h" />
+    <ClInclude Include="Game\Headers\Map\Map.h" />
+    <ClInclude Include="Game\Headers\Map\Parser.h" />
+    <ClInclude Include="Game\Headers\Map\Tile.h" />
+    <ClInclude Include="Game\Headers\Utils\Display.h" />
+    <ClInclude Include="Game\Headers\Utils\Game.h" />
+    <ClInclude Include="Game\Headers\Utils\Utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\main.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Enemies\Enemy.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Enemies\HeadlessZombie.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Enemies\Zombie.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Enemies\ZombieSwimmer.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Entity.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Players\Mage.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Players\Player.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Players\Warrior.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Players\WarriorMage.cpp" />
+    <ClCompile Include="Game\Sources\Entities\Swimmer.cpp" />
+    <ClCompile Include="Game\Sources\Map\Map.cpp" />
+    <ClCompile Include="Game\Sources\Map\Parser.cpp" />
+    <ClCompile Include="Game\Sources\Map\Tile.cpp" />
+    <ClCompile Include="Game\Sources\Utils\Display.cpp" />
+    <ClCompile Include="Game\Sources\Utils\Game.cpp" />
+    <ClCompile Include="Game\Sources\Utils\Utilities.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
