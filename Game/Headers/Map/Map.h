@@ -6,7 +6,6 @@
 
 class Map
 {
-
 public:
 	std::vector<int> data = {
 	0,0,0,0,0,0,0,0,0,0,
