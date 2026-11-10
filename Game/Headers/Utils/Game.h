@@ -26,4 +26,13 @@ public:
 private:
     Game() {}
     bool running = true;
+
+    bool isEnemyAtPos(Vector2 pos);
+
+    Enemy* getEnemyAtPos(Vector2 pos);
+
+    void playerMovement();
+
+    void gameOver();
+    void victory();
 };

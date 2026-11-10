@@ -15,26 +15,78 @@ void Game::start()
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }
 
+bool Game::isEnemyAtPos(Vector2 pos) {
+	for (int i = 0; i < enemyGroup.size(); i++) {
+		if (enemyGroup[i]->position.x == pos.x && enemyGroup[i]->position.y == pos.y) {
+			return true;
+		}
+	}
+	return false;
+}
+
+Enemy* Game::getEnemyAtPos(Vector2 pos) {
+	for (int i = 0; i < enemyGroup.size(); i++) {
+		if (enemyGroup[i]->position.x == pos.x && enemyGroup[i]->position.y == pos.y) {
+			return enemyGroup[i];
+		}
+	}
+	return nullptr;
+}
+
+void Game::playerMovement()
+{
+	char input = _getch();
+	system("cls");
+	Vector2 playerDirection = currentPlayer.inputMovePlayer(input);
+	currentPlayer.move(currentMap, playerDirection);
+}
+
 void Game::loop()
 {
 	while (running) {
 		displayAll(currentMap, currentPlayer, enemyGroup);
-		char input = _getch();
-		system("cls");
-		Vector2 playerDirection = currentPlayer.inputMovePlayer(input);
-		currentPlayer.move(currentMap, playerDirection);
+
+		playerMovement();
+
 		displayAll(currentMap,currentPlayer,enemyGroup);
 
 		for (int i = 0; i < enemyGroup.size(); i++) {
 			enemyGroup[i]->move(currentMap, currentPlayer.position);
 		}
+		
+		if (isEnemyAtPos(currentPlayer.position)) {
+			currentPlayer.damage(1);
 
-		displayAll(currentMap, currentPlayer, enemyGroup);
+			if (currentPlayer.getHealth() <= 0) {
+				gameOver();
+			}
+		}
+		else if (currentMap.getTileAtPos(currentPlayer.position).name == 'E') {
+			victory();
+		}
 
 	}
 }
 
 void Game::end()
 {
+	for (int i =0; i < enemyGroup.size(); i++) {
+		delete enemyGroup[i];
+	}
+}
 
+void Game::gameOver()
+{
+	running = false;
+	system("cls");
+	std::cout << "Game Over!" << std::endl;
+	end();
+}
+
+void Game::victory()
+{
+	running = false;
+	system("cls");
+	std::cout << "You win!" << std::endl;
+	end();
 }

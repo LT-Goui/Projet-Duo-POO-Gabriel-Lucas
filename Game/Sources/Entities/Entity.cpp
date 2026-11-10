@@ -49,6 +49,11 @@ void Entity::moveInDirection(Map current_map, Vector2 direction)
 
 }
 
+int Entity::getHealth()
+{
+	return this->health;
+}
+
 Entity::Entity(Vector2 position)
 {
 	this->position = position;
