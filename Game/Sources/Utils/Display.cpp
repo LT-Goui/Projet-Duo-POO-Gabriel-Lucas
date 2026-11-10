@@ -10,7 +10,7 @@ void displayAll(Map map, Player player, std::vector<Enemy*> enemyGroup) {
     displayPlayer(screen,map,player);
 
     system("cls");
-    printToScreen(screen, map);
+    printToScreen(screen, map,player);
 
     delete[] screen;
 }
@@ -39,12 +39,12 @@ void displayEnemies(char* screenEnemies, Map map, std::vector<Enemy*> enemyGroup
 
 void printMenu(Player player)
 {
-    std::cout <<" Menu : ";
-    std::cout <<" Z     : Avancer vers le haut ";
-    std::cout <<" Q     : Avancer vers la gauche ";
-    std::cout <<" S     : Avancer vers la droite ";
-    std::cout <<" D     : Avancer vers le bas ";
-    std::cout <<" SPACE : Lancer un sort ";
+    std::cout <<" Menu : \n";
+    std::cout <<" Z     : Avancer vers le haut \n";
+    std::cout <<" Q     : Avancer vers la gauche \n";
+    std::cout <<" S     : Avancer vers la droite \n";
+    std::cout <<" D     : Avancer vers le bas \n";
+    std::cout <<" SPACE : Lancer un sort \n";
 }
 
 
