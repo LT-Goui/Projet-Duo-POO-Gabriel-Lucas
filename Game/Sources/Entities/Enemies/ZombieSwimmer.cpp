@@ -14,3 +14,21 @@ void ZombieSwimmer::moveInDirection(Map current_map, Vector2 direction)
 	}
 
 }
+
+void ZombieSwimmer::move(Map current_map, Vector2 playerPosition)
+{
+	Vector2 direction = Vector2{ 0,0 };
+
+	if (isPlayerInRange(playerPosition, this->range)) {
+		direction = getDirectionToTarget(playerPosition);
+	}
+	else {
+		do {
+			direction = getRandomDirection();
+		} while (!canMove(current_map, direction, true));
+	}
+
+	ZombieSwimmer::moveInDirection(current_map, direction);
+
+}
+

@@ -1,4 +1,7 @@
 #include "../../Headers/Utils/Game.h"
+#include "../../Headers/Entities/Enemies/Zombie.h"
+#include "../../Headers/Entities/Enemies/HeadlessZombie.h"
+#include "../../Headers/Entities/Enemies/ZombieSwimmer.h"
 
 
 void Game::start()
@@ -9,8 +12,8 @@ void Game::start()
 
 	chooseCharacter();
 
-	enemyGroup.push_back(new Zombie{Vector2{0,0}});
-	enemyGroup.push_back(new Zombie{Vector2{5,7}});
+	enemyGroup.push_back(new HeadlessZombie{Vector2{0,0}});
+	enemyGroup.push_back(new ZombieSwimmer{Vector2{9,6}});
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }

@@ -32,7 +32,7 @@ protected:
 
 	*/
 
-	Vector2 getRandomDirection();
+	//Vector2 getRandomDirection();
 
 	int range = 4;
 
@@ -40,7 +40,7 @@ public:
 
 	char newName = 'Z';
 
-	void move(Map current_map, Vector2 playerPosition) override;
+	virtual void move(Map current_map, Vector2 playerPosition) override;
 
 	bool isPlayerInRange(Vector2 playerPosition, int range);
 

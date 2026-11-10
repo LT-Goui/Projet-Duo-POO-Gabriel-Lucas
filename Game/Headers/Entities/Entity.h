@@ -10,6 +10,8 @@ public:
 
 	void damage(int amount);
 
+	Vector2 getRandomDirection();
+
 	virtual void kill() = 0;
 
 	virtual void move(Map current_map, Vector2 target) = 0;

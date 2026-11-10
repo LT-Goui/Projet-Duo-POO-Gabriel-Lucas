@@ -2,6 +2,7 @@
 #include "../../Headers/Map/Map.h"
 
 #include <iostream>
+#include <random>
 
 void Entity::damage(int amount)
 {
@@ -15,6 +16,29 @@ void Entity::damage(int amount)
 
 }
 
+Vector2 Entity::getRandomDirection()
+{
+	static std::random_device rd;
+	static std::mt19937 gen(rd());
+	static std::uniform_int_distribution<int> dis(0, 3);
+
+	int random_direction = dis(gen);
+
+	switch (random_direction)
+	{
+	case 0:
+		return Vector2{ 0,-1 };
+	case 1:
+		return Vector2{ -1,0 };
+	case 2:
+		return Vector2{ 0,1 };
+	case 3:
+		return Vector2{ 1,0 };
+
+	default:
+		return Vector2{ 0,0 };
+	}
+}
 
 
 bool Entity::canMove(Map current_map, Vector2 direction,bool can_swim)

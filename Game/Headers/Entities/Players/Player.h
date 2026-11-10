@@ -28,4 +28,6 @@ public :
 	Player(Vector2 position) : Entity(position) {
 		this->position = position;
 	};
+
+	virtual void attack() = 0;
 };

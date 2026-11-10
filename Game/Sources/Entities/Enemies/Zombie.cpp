@@ -2,6 +2,7 @@
 
 #include <random>
 
+/*
 Vector2 Zombie::getRandomDirection()
 {
     static std::random_device rd;
@@ -26,7 +27,7 @@ Vector2 Zombie::getRandomDirection()
     }
 }
 
-
+*/
 
 bool Zombie::isPlayerInRange(Vector2 playerPosition, int range)
 {
