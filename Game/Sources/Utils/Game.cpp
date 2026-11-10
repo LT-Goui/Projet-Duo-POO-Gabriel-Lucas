@@ -17,6 +17,32 @@ void Game::start()
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }
 
+void Game::chooseCharacter() {
+	bool choosingCharacter = true;
+	while (choosingCharacter) {
+		std::cout << "Choisissez votre personnage : 1 Mage, 2 Warrior, 3 WarriorMage \n";
+		char choice = _getch();
+		switch (choice)
+		{
+		case '1':
+			currentPlayer = Mage{ Vector2{1,1} };
+			choosingCharacter = false;
+			break;
+		case '2':
+			currentPlayer = Warrior{ Vector2{1,1} };
+			choosingCharacter = false;
+			break;
+		case '3':
+			currentPlayer = WarriorMage{ Vector2{1,1} };
+			choosingCharacter = false;
+			break;
+		default:
+			std::cout << "Erreur veuillez recommencer \n";
+			break;
+		}
+	}
+}
+
 void Game::changeEnemyGroup()
 {
 	enemyGroup.clear();
@@ -83,16 +109,13 @@ void Game::playerMovement()
 void Game::loop()
 {
 	while (running) {
-		displayAll(currentMap, currentPlayer, enemyGroup);
 
 		playerMovement();
-
-		displayAll(currentMap,currentPlayer,enemyGroup);
 
 		for (int i = 0; i < enemyGroup.size(); i++) {
 			enemyGroup[i]->move(currentMap, currentPlayer.position);
 		}
-		
+
 		if (isEnemyAtPos(currentPlayer.position)) {
 			currentPlayer.damage(1);
 
@@ -104,6 +127,7 @@ void Game::loop()
 			changeLevel();
 		}
 
+		displayAll(currentMap, currentPlayer, enemyGroup);
 	}
 }
 
@@ -126,35 +150,4 @@ void Game::victory()
 	running = false;
 	system("cls");
 	std::cout << "You win!" << std::endl;
-}
-
-void Game::chooseCharacter() {
-	bool choosingCharacter = true;
-	while (choosingCharacter) {
-		std::cout << "Choisissez votre personnage : 1 Mage, 2 Warrior, 3 WarriorMage \n";
-		char choice = _getch();
-		switch (choice)
-		{
-		case '1':
-			currentPlayer = Mage{ Vector2{1,1} };
-			choosingCharacter = false;
-			break;
-		case '2':
-			currentPlayer = Warrior{ Vector2{1,1} };
-			choosingCharacter = false;
-			break;
-		case '3':
-			currentPlayer = WarriorMage{ Vector2{1,1} };
-			choosingCharacter = false;
-			break;
-		default:
-			std::cout << "Erreur veuillez recommencer \n";
-			break;
-		}
-	}
-}
-
-void Game::attackEnemyInRange()
-{
-
 }
