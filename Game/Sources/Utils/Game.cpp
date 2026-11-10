@@ -12,12 +12,46 @@ void Game::start()
 
 	chooseCharacter();
 
-	enemyGroup.push_back(new HeadlessZombie{Vector2{0,0}});
-	enemyGroup.push_back(new ZombieSwimmer{Vector2{9,6}});
-
 	changeLevel();
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
+}
+
+void Game::changeEnemyGroup()
+{
+	enemyGroup.clear();
+	switch (currentLevel)
+	{
+	case 0:
+		enemyGroup.push_back(new HeadlessZombie{ Vector2{0,0} });
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{9,6} });
+		break;
+	case 1:
+		enemyGroup.push_back(new Zombie{ Vector2{5,5} });
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{6,2} });
+		break;
+	case 2:
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{9,1} });
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{0,5} });
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{0,9} });
+		enemyGroup.push_back(new ZombieSwimmer{ Vector2{9,9} });
+		break;
+	default:
+		break;
+	}
+}
+
+void Game::changeLevel()
+{
+	if (currentLevel == 3)
+		victory();
+	else 
+	{
+		currentMap = mapList[currentLevel];
+		currentPlayer.position = playerPosList[currentLevel];
+		changeEnemyGroup();
+		currentLevel += 1;
+	}
 }
 
 bool Game::isEnemyAtPos(Vector2 pos) {
@@ -67,7 +101,7 @@ void Game::loop()
 			}
 		}
 		else if (currentMap.getTileAtPos(currentPlayer.position).name == 'E') {
-			victory();
+			changeLevel();
 		}
 
 	}
@@ -80,20 +114,11 @@ void Game::end()
 	}
 }
 
-void Game::changeLevel()
-{
-	currentMap = mapList[currentLevel];
-	currentLevel += 1;
-	// à rajouter, changement d'ennemis et player
-
-}
-
 void Game::gameOver()
 {
 	running = false;
 	system("cls");
 	std::cout << "Game Over!" << std::endl;
-	end();
 }
 
 void Game::victory()
@@ -101,7 +126,6 @@ void Game::victory()
 	running = false;
 	system("cls");
 	std::cout << "You win!" << std::endl;
-	end();
 }
 
 void Game::chooseCharacter() {
