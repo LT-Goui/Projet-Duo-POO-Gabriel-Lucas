@@ -4,13 +4,15 @@
 void Game::start()
 {
 	std::cout << "Hello World!\n";
-	
+
 	currentMap.size = { 10,10 };
 
 	chooseCharacter();
 
 	enemyGroup.push_back(new Zombie{Vector2{0,0}});
 	enemyGroup.push_back(new Zombie{Vector2{5,7}});
+
+	changeLevel();
 
 	displayAll(currentMap, currentPlayer, enemyGroup);
 }
