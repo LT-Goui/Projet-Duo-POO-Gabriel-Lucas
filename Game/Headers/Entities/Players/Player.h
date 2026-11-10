@@ -7,6 +7,13 @@ class Player : public Entity
 {
 
 public :
+
+	enum playerType
+	{
+		Mage,
+		Warrior,
+		WarriorMage,
+	};
 	
 	char name = 'H';
 

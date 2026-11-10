@@ -4,7 +4,10 @@
 #include "../Map/Map.h"
 #include "../Utils/Utilities.h"
 #include "../Utils/Display.h"
-#include "../Entities/Players/Player.h"
+#include "../Entities/Players/Mage.h"
+#include "../Entities/Players/Warrior.h"
+#include "../Entities/Players/WarriorMage.h"
+#include "../../Headers/Entities/Enemies/Zombie.h"
 
 //Le Singleton
 class Game
@@ -19,11 +22,13 @@ public:
     void loop();
     void end();
 
-    Map currentMap;
     Player currentPlayer{Vector2{1,1}};
+    Map currentMap;
     std::vector<Enemy*> enemyGroup = {};
 
 private:
     Game() {}
     bool running = true;
+    void chooseCharacter();
+	
 };
