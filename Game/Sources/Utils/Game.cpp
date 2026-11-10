@@ -107,7 +107,7 @@ void Game::victory()
 void Game::chooseCharacter() {
 	bool choosingCharacter = true;
 	while (choosingCharacter) {
-		std::cout << "Choisissez votre personnage : 1 Mage, 2 Warrior, 3 WarriorMage";
+		std::cout << "Choisissez votre personnage : 1 Mage, 2 Warrior, 3 WarriorMage \n";
 		char choice = _getch();
 		switch (choice)
 		{
@@ -124,7 +124,7 @@ void Game::chooseCharacter() {
 			choosingCharacter = false;
 			break;
 		default:
-			std::cout << "Erreur veuillez recommencer";
+			std::cout << "Erreur veuillez recommencer \n";
 			break;
 		}
 	}
