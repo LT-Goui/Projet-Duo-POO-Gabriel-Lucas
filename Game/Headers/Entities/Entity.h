@@ -18,6 +18,8 @@ public:
 
 	virtual void moveInDirection(Map current_map, Vector2 direction);
 
+	int getHealth();
+
 	Entity(Vector2 position);
 
 	char getName();
