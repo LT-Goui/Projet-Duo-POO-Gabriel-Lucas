@@ -5,10 +5,16 @@
 class WarriorMage : public Warrior, public Mage
 {
 public:
-	char name = 'S';
+	char sorcererName = 'S';
 
-	WarriorMage(Vector2 position);;
+	WarriorMage(Vector2 position);
+
+	//WarriorMage(Vector2 position) : Player(position), Warrior(position), Mage(position) {
+	//	this->position = position;
+	//	this->name = sorcererName;
+	//	this->health = sorcererHealth;
+	//};
 
 private:
-	int health = 4;
+	int sorcererHealth = 3;
 };

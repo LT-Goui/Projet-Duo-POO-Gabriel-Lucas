@@ -14,4 +14,6 @@ void displayPlayer(char* screenPlayer,Map map, Player player);
 
 void displayEnemies(char* screenEnemies,Map map, std::vector<Enemy*> enemyGroup);
 
-void printToScreen(char* printScreen,Map);
+void printMenu(Player player);
+
+void printToScreen(char* printScreen,Map map, Player player);

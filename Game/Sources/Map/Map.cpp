@@ -26,6 +26,7 @@ Map::Map(std::vector<int> dataInput) {
 int Map::getHeight() {
 	return (size.y);
 }
+
 int Map::getWidth() {
 	return (size.x);
 }

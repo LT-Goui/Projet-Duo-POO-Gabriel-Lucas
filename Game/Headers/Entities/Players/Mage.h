@@ -5,9 +5,15 @@ class Mage : virtual public Player
 {
 public :
 
-	char name = 'M';
+	char mageName = 'M';
 
 	Mage(Vector2 position);
+
+	//Mage(Vector2 position) : Player(position) {
+	//	this->position = position;
+	//	this->name = mageName;
+	//	this->health = mageHealth;
+	//};
 
 	std::vector<Vector2> NewAttackDirection = {
 	Vector2{-1,-1}, Vector2{0,-1}, Vector2{1,-1},
@@ -15,7 +21,9 @@ public :
 	Vector2{-1,1}, Vector2{0,1}, Vector2{1,1},
 	};
 
+protected:
+	int mageHealth = 1;
+
 private:
-	int health = 3;
 
 };

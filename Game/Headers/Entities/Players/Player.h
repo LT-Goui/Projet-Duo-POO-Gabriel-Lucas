@@ -25,7 +25,6 @@ public :
 	std::vector<Vector2> attackDirection = { Vector2{0,0} };
 
 
-	bool canPlayerPlay();
 	Vector2 inputMovePlayer(char input);
 	void kill() override;
 
